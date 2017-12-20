@@ -1,6 +1,29 @@
 <template>
-  <svg class="board">
-    <field v-for="(field, index) in fields" :key="field.id" :x="field.x" :y="field.y" :radius="field.radius" :type="field.type" :number="field.number" />
+  <svg class="board" viewBox="0 0 600 520">
+    <defs>
+      <filter id="f1" x="0" y="0">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+      </filter>
+      <pattern id="img-wood" x="0" y="0" height="100%" width="100%" viewBox="0 0 700 800">
+        <image href="/static/wood.jpg"></image>
+      </pattern>
+      <pattern id="img-stone" x="0" y="0" height="100%" width="100%" viewBox="0 0 350 400">
+        <image href="/static/stone.jpg"></image>
+      </pattern>
+      <pattern id="img-desert" x="0" y="0" height="100%" width="100%" viewBox="0 0 350 400">
+        <image href="/static/desert.jpg"></image>
+      </pattern>
+      <pattern id="img-sheep" x="0" y="0" height="100%" width="100%" viewBox="0 0 170 200">
+        <image href="/static/sheep.jpg"></image>
+      </pattern>
+      <pattern id="img-clay" x="0" y="0" height="100%" width="100%" viewBox="0 0 170 200">
+        <image href="/static/clay.jpg"></image>
+      </pattern>
+      <pattern id="img-cereal" x="0" y="0" height="100%" width="100%" viewBox="0 0 170 200">
+        <image href="/static/cereal.jpg"></image>
+      </pattern>
+    </defs>
+    <field v-for="field in fields" :key="field.id" :x="field.x" :y="field.y" :radius="field.radius" :type="field.type" :number="field.number" />
   </svg>
 </template>
 
@@ -65,8 +88,7 @@ export default {
 
 <style scoped>
 .board {
-  width: 100%;
-  height: 100%;
-  position: relative;
+  width: 800px;
+  height: 720px;
 }
 </style>

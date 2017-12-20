@@ -18,5 +18,6 @@ html, body {
 html, body, #app {
   height: 100%;
   box-sizing: border-box;
+  background-image: url('/static/sea.jpg')
 }
 </style>

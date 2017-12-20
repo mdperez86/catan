@@ -1,6 +1,6 @@
 <template>
   <svg class="field">
-    <polygon :points="points" :class="type"/>
+    <polygon :points="points" :class="type" :fill="`url(#img-${type})`"/>
     <text :x="x" :y="y" :style="{ fontSize: this.fontSize }">{{ number }}</text>
   </svg>
 </template>
@@ -76,24 +76,6 @@ export default {
 }
 .locked {
   fill: aquamarine;
-}
-.stone {
-  fill: #858585;
-}
-.sheep {
-  fill: #acfc94;
-}
-.cereal {
-  fill: #f7c77f;
-}
-.wood {
-  fill: #09440b;
-}
-.clay {
-  fill: #47280a;
-}
-.desert {
-  fill: #ffebd6;
 }
 text {
   fill: #ffffff;
