@@ -71,8 +71,10 @@ export default {
 </script>
 
 <style scoped>
-.field {
-  text-align: center;
+polygon {
+  stroke: #ffffff;
+  stroke-width: 10px;
+  stroke-opacity: 1
 }
 .locked {
   fill: aquamarine;
